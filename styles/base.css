@@ -1,14 +1,13 @@
-nav{
-    background-color: #333;
-    color: white;
+.hover {
+    background-color: #767373;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 50px;
 }
-nav a{
+ a:hover{
     color: white;
-    text-decoration: none;
 }
 .card {
     border: 1px solid #ddd;
