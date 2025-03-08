@@ -62,3 +62,7 @@ div{
     padding: 1px;
     text-align: center;
 }
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
