@@ -1,0 +1,63 @@
+nav{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.card h1{
+    color: white;
+    background-color: rgb(52, 52, 155);
+    padding: 1px;
+    text-align: center;
+
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    gap: 20px;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+}
+article{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 15px;
+}
+article h2{
+    color: rgb(52, 52, 155);
+    text-decoration: double;
+    border-bottom: 1px solid black;
+    text-align: center;	
+}
+.card img{
+    float: left;
+}
+.card p{
+    text-align: justify;
+
+}
+footer{
+    background-color: #0b0987;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+div{
+    background-color: #0b0987;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    text-transform: lowercase;
+    
+}
