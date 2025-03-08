@@ -44,7 +44,7 @@ main{
     display: flex;
     justify-content: center;
     gap: 5px;
-    padding: 20px;
+    padding: 20px;;
 } 
 
 footer{
@@ -63,8 +63,10 @@ div{
 body{
     font-family: "Roboto", sans-serif;
     font-weight:   200;
+    background-color: #6482a3;
 }
 li a{
-    color: black;
+    color:red;
     text-decoration: none;
 }
+
