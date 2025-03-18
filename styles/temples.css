@@ -1,0 +1,63 @@
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: white;  
+    margin: 0;  
+    padding: 0;  
+}  
+ 
+.hover {  
+    background-color: purple;  
+    color: white;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;   
+    bottom: 0;  
+    width: 100%;
+          
+} 
+header h1 {    
+    color: rgb(11, 11, 11);  
+    text-align: center;
+}
+
+.templeList {  
+    padding: 70px; 
+}
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: white;  
+    margin: 5px;  
+    padding: 10px;  
+}
+main h1,h3{
+    text-align: center;
+}
+.gallery {  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}  
+
+.gallery figure {  
+    margin: 0;  
+    text-align: center;
+    border: 1px solid purple;
+    padding: 10px;  
+}  
+
+.gallery img {  
+    width: 250px;   
+}  
+
+footer {  
+    background-color: purple;  
+    color: white;  
+    text-align: center;  
+    padding: 10px;  
+    position: relative;  
+    bottom: 0;  
+    width: 100%;  
+}  

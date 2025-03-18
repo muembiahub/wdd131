@@ -27,42 +27,55 @@
     </header>
     <main>
         <h1> Home </h1>
+            <p> Welcome to the Temple Album. This album contains pictures of various temples around the world. Click on the images to view the pictures. </p>
+        <div id="templeList">
+            <h2>Temple List</h2>
+            <ul>
+                <li><a href="https://www.churchofjesuschrist.org/temples/list?lang=eng">Temple List</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/open-houses?lang=eng">Open Houses</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/dedications?lang=eng">Dedications</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/photographs?lang=eng">Photographs</a></li>
+            </ul>
+        </div>
+        <h3>Temple Gallery</h3>
+        <div class="gallery">
         <figure>
-            <img src="images/meridian_idaho_temple_front_view.webp" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
+            <img src="images/aba_nigeria_temple_lds.webp" alt="Temple 1" id="temple1" class="temple" onclick="showImage(this)">
+            <figcaption>Aba_nigeria_temple_lds</figcaption>
         </figure>
         <figure>
-            <img src="images/mesa_temple.webp" alt="Temple 2">
-            <figcaption>Temple 2</figcaption>
+            <img src="images/accra_ghana_temple_lds.webp" alt="Temple 2" id="temple2" class="temple" onclick="showImage(this)">
+            <figcaption>Accra_ghana_temple_lds</figcaption>
+        </figure>
+            <figure>
+                <img src="images/adelaide_australia_temple_lds.webp" alt="Temple 3" id="temple3" class="temple" onclick="showImage(this)">
+                <figcaption>adelaide_australia_temple_lds</figcaption>
+            </figure>
+        <figure>
+            <img src="images/belem_brazil_temple_exterior.webp" alt="Temple 4" id="temple4" class="temple" onclick="showImage(this)">
+            <figcaption>belem_brazil_temple_exterior</figcaption>
         </figure>
         <figure>
-            <img src="images/quetzaltenango_guatemala_mormon_temple.webp" alt="Temple 3">
-            <figcaption>Temple 3</figcaption>
+            <img src="images/billings_montana_temple.webp" alt="Temple 5" id="temple5" class="temple" onclick="showImage(this)">
+            <figcaption>billings_montana_temple</figcaption>
         </figure>
         <figure>
-            <img src="images/sapporo_japan_temple_night_photo.webp" alt="Temple 4">
-            <figcaption>Temple 4</figcaption>
+            <img src="images/calgary_alberta_lds_temple.webp" alt="Temple 6" id="temple6" class="temple" onclick="showImage(this)">
+            <figcaption>calgary_alberta_lds_temple</figcaption>
         </figure>
         <figure>
-            <img src="images/temples_exterior_utah_payson_night.webp" alt="Temple 5">
-            <figcaption>Temple 5</figcaption>
+            <img src="images/caracas_venezuela_temple.webp" alt="Temple 7" id="temple7" class="temple" onclick="showImage(this)">
+            <figcaption>caracas_venezuela_temple</figcaption>
         </figure>
         <figure>
-            <img src="images/temple6.jpg" alt="Temple 6">
-            <figcaption>Temple 6</figcaption>
+            <img src="images/rendering_abidjan_ivory_coast_temple.webp" alt="Temple 8" id="temple8" class="temple" onclick="showImage(this)">
+            <figcaption>rendering_abidjan_ivory_coast_temple</figcaption>
         </figure>
         <figure>
-            <img src="images/temple7.jpg" alt="Temple 7">
-            <figcaption>Temple 7</figcaption>
+            <img src="images/bismark_north_dakota_temple.webp" alt="Temple 9" id="temple9" class="temple" onclick="showImage(this)">
+            <figcaption>bismark_north_dakota_temple</figcaption>
         </figure>
-        <figure>
-            <img src="images/temple8.jpg" alt="Temple 8">
-            <figcaption>Temple 8</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple9.jpg" alt="Temple 9">
-            <figcaption>Temple 9</figcaption>
-        </figure>
+    </div>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> Jonathan M. Muembia. All rights reserved. Democratic Republic of the Congo.</p>
