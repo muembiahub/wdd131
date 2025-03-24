@@ -17,7 +17,7 @@ h1 {
 }
 @media screen {
     body{
-        background-color: --secondary-color;
+        background-color: rgb(83, 158, 135);
         color: black;
         font-family: 'Arial', sans-serif;
         font-size: 1em;
