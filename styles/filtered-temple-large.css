@@ -1,0 +1,40 @@
+@media 
+only screen and (min-width: 768px) {
+    .temples-large {
+        display: block;
+    }
+    .templeList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .templeList figure {
+        margin: 0;
+        text-align: center;
+        border: 1px solid purple;
+        padding: 10px;
+    }
+    .templeList img {
+        width: 250px;
+    }
+    .templeList figcaption {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: purple;
+    }
+    .templeList figcaption p {
+        font-size: 1em;
+        font-weight: normal;
+        color: black;
+    }
+    .templeList figcaption p a {
+        color: purple;
+    }
+    .templeList figcaption p a:hover {
+        color: white;
+    }
+    .templeList figcaption p a:visited {
+        color: purple;
+    }
+    
+}
