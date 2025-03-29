@@ -6,11 +6,6 @@ body {
     padding: 0;
     
 } 
-html {  
-    height: 100%;
-    margin: 1px; 
-    background-color: thistle;
-}
  
 .hover {  
     background-color: rgb(223, 164, 164);  
