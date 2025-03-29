@@ -1,6 +1,28 @@
+// Get the current year and display it in the footer
+const currentyear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = currentyear;
+// Get the last modified date of the current document and display it in the footer
+const lastModified = new Date(document.lastModified);
+document.getElementById("lastModified").textContent = "Last Modified Date: " + lastModified;
 
 const temples = [
-    {
+  {
+    templeName: "Quetzaltenango Guatemala",
+    location: "Quetzaltenango, Guatemala",
+    dedicated: "2019, December, 15",
+    area: 10000,
+    imageUrl:
+    "https://churchofjesuschrist.org/imgs/61a9bf72e29c45210c113c3f70c8d80ceb388362/full/800%2C/0/default.jpg",
+  },
+  {
+    templeName: "Anchorage Alaska",
+    location: "Anchorage, Alaska, United States",
+    dedicated: "1985, December, 12",
+    area: 10000,
+    imageUrl:
+    "https://www.churchofjesuschrist.org/imgs/ef1d9b0a65b398d3d5aad2ccaad5aa79588b6cfd/full/800%2C/0/default.jpg",
+  },
+  {
       templeName: "Aba Nigeria",
       location: "Aba, Nigeria",
       dedicated: "2005, August, 7",
@@ -55,39 +77,44 @@ const temples = [
       area: 116642,
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-    },
-    {
-        templeName: "Salt Lake City Utah",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
-        area: 253015,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-temple/400x250/salt-lake-temple
-    },
-    {
-        templeName: "mesa Arizona",
-        location: "Mesa, Arizona, United States",
-        dedicated: "1927, October, 23",
-        area: 21000,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mesa-arizona/400x250/mesa-arizona-temple-lds-273998-wallpaper.jpg"
-    },
-    {
-      templeName: "Tokyo Japan",
-        location: "Tokyo, Japan",
-        dedicated: "1980, October, 27",
-        area: 107688,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-273997-wall
-    }
+    }, 
     
   ];
+// create TempleCard function to create a card for each temple
+createTempleCard();
+function createTempleCard() {
+  const gallery = document.querySelector(".temple-gallery");
+  if (!gallery) {
+    console.error("Error: .temple-gallery container not found in the HTML.");
+    return;
+  }
 
+  temples.forEach(temple => {
+    let card = document.createElement("div");
+    let templeName = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedicated = document.createElement("p");
+    let area = document.createElement("p");
+    let image = document.createElement("img");
 
+    templeName.textContent = temple.templeName;
+    location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+    dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+    area.innerHTML = `<strong>Area:</strong> ${temple.area} sq ft`;
 
-// Get the current year and display it in the footer
-const currentyear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentyear;
-// Get the last modified date of the current document and display it in the footer
-const lastModified = new Date(document.lastModified);
-document.getElementById("lastModified").textContent = "Last Modified Date: " + lastModified;
+    // Debugging: Log the image URL
+    console.log(`Loading image for ${temple.templeName}: ${temple.imageUrl}`);
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", temple.templeName);
+    image.setAttribute("loading", "lazy");
+
+    card.appendChild(templeName);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(area);
+    card.appendChild(image);
+
+    card.classList.add("temple-card");
+    gallery.appendChild(card);
+  });
+}
