@@ -19,12 +19,12 @@ p{
     line-height: 1.6;
     margin: 0 0 1em;
 }
-.blog1{
-    border: #007bff;
-    display: flex;
-    align-items: 
-
-
+.footer-content{
+  display: flex;
+  align-items: end;
+  
+  gap: 100px;
+  padding: 8px;
 }
 .hover{
     background-color: var(--siteplan-background-color);
