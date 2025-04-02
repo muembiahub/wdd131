@@ -1,0 +1,85 @@
+:root{
+    --siteplan-background-color: #f0f0f0;
+    --siteplan-text-color: #333;
+    --siteplan-border-color: #ccc;
+    --siteplan-link-color: #007bff;
+    --siteplan-link-hover-color: #0056b3;
+}
+body{
+    background-color: var(--siteplan-background-color);
+    color: var(--siteplan-text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    color: var(--siteplan-text-color);
+}
+p{
+    line-height: 1.6;
+    margin: 0 0 1em;
+}
+.blog1{
+    border: #007bff;
+    display: flex;
+    align-items: 
+
+
+}
+.hover{
+    background-color: var(--siteplan-background-color);
+    border: 1px solid var(--siteplan-border-color);
+    padding: 6px;
+    margin: 10px 0;
+    transition: background-color 0.3s, border 0.3s;
+    
+
+}
+.hover:hover{
+    background-color: var(--siteplan-background-color);
+    border: 1px solid var(--siteplan-border-color);
+    cursor: pointer;
+}
+.hover:hover h1, .hover:hover h2, .hover:hover h3, .hover:hover h4, .hover:hover h5, .hover:hover h6{
+    color: var(--siteplan-link-hover-color);
+}
+a{
+    color: var(--siteplan-link-color);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--siteplan-link-hover-color);
+    text-decoration: underline;
+}
+
+nav{
+    background-color: var(--siteplan-background-color);
+    padding: 10px;
+    text-align: center;
+}
+nav a{
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    padding: 20px;
+}
+ul, ol{
+    margin: 0 0 1em;
+    padding-left: 20px;
+}
+li{
+    margin: 0 0 0.5em;
+    list-style-type: none;
+}
+
+footer{
+    background-color: var(--siteplan-background-color);
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--siteplan-border-color);
+}
+
