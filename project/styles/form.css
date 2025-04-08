@@ -1,0 +1,66 @@
+:root{
+    --siteplan-background-color: #f4f4f4;
+    --siteplan-text-color: #333;
+    --siteplan-link-color: #007bff;
+    --siteplan-link-hover-color: #0056b3;
+    --siteplan-border-color: #ccc;
+    --siteplan-header-background-color: #007bff;
+    --siteplan-header-text-color: white;
+    --siteplan-header-link-color: white;
+    --siteplan-header-link-hover-color: #0056b3;
+    --siteplan-header-border-color: #0056b3;
+}
+body{
+    background-color: var(--siteplan-background-color);
+    color: var(--siteplan-text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    color: var(--siteplan-text-color);
+}
+p{
+    line-height: 1.6;
+    margin: 0 0 1em;
+}
+h1{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    background-color: wheat;
+    border: #333 solid 2px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--siteplan-background-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+button{
+    background-color: var(--siteplan-link-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: var(--siteplan-link-hover-color);
+}
+footer{
+    background-color: var(--siteplan-background-color);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--siteplan-border-color);
+}
+footer a{
+    color: var(--siteplan-link-color);
+    text-decoration: none;
+}   
