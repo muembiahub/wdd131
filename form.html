@@ -24,22 +24,30 @@
     <main>
         <form id="reviewForm" action="review.html" method="get" class="form-container">
             <h2>Submit Your Review</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-            <label for="product">Product:</label>
-            <select id="product" name="product" required>
+            <label for="name">Product Name:</label>
+            <select id="Product" name="product" required>
                 <option value="" disabled selected>Select a product</option>
                 <option value="product1">Milk</option>
-                <option value="product2"> Tie</option>
-                <option value="product3"> Orange</option>
+                <option value="product2">Tie</option>
+                <option value="product3">Orange</option>
+                <option value="product4">Shirt</option>
+                <option value="product5">Pants</option>
+                <option value="product6">Shoes</option>
+                <option value="product7">Hat</option>
+                <option value="product8">Socks</option>
             </select>
+            <label for="rating">Overall Rating:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" class="star">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" class="star">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3" >
+                <input type="radio" id="star2" name="rating" value="2">
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" class="star">&#9733;</label>
 
-            <label for="rating">Rating:</label>
-            <input type="number" id="rating" name="rating" min="1" max="5" required placeholder="Rate from 1 to 5">
+              </div>  
 
             <label for="review">Review:</label>
             <textarea id="review" name="review" rows="4" required placeholder="Write your review here"></textarea>
