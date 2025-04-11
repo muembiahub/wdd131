@@ -3,47 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple form example using HTML, CSS, and JavaScript.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, form, example">
+    <meta name="description" content="Product Review Form">
+    <meta name="keywords" content="Product Review, HTML Form, JavaScript, CSS">
     <meta name="author" content="Jonathan M. Muembia">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#4CAF50">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Form Example">
-    <meta name="application-name" content="Form Example">
-    <title>Product review</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Product Review Form</title>
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
+
 </head>
 <body>
-    <header> 
-        <h1>Product Review</h1>
-        
-        <p>Fill out the form below:</p>
+    <header>
+        <h1>Product Review Form</h1>
     </header>
     <main>
-        <form id="reviewForm" action="review.html" method="get" class="form-container">
-            <h2>Submit Your Review</h2>
-            <label for="name">Product Name:</label>
-            <select id="Product" name="product" required>
-                <option value="" disabled selected>Select a product</option>
-                <option value="product1">Milk</option>
-                <option value="product2">Tie</option>
-                <option value="product3">Orange</option>
-                <option value="product4">Shirt</option>
-                <option value="product5">Pants</option>
-                <option value="product6">Shoes</option>
-                <option value="product7">Hat</option>
-                <option value="product8">Socks</option>
+        <form action="submit.html" method="get">
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
             </select>
-            <div class="rating-group">                    
-                <legend> Overall Rating:</legend>
+
+            <fieldset>
+                <legend>Rating:</legend>
                 <label>
-                    <input type="radio" name="rating" value="1" required> <span>&#9733;</span>
+                    <input type="radio" name="rating" value="1"> <span>&#9733;</span>
                 </label>
                 <label>
-                    <input type="radio" name="rating" value="2"> <span>&#9733;&#9733;<span>
+                    <input type="radio" name="rating" value="2"> <span>&#9733;&#9733;</span>
                 </label>
                 <label>
                     <input type="radio" name="rating" value="3"> <span>&#9733;&#9733;&#9733;</span>
@@ -54,53 +46,37 @@
                 <label>
                     <input type="radio" name="rating" value="5"> <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </label>
-            </div>
-            <div class="date">
-                <label for="date">Date of Instalation:</label>
-                <input type="date" id="date" name="date" required>
-            </div>
-            <div class="time">
-                <label for="time">Time of Instalation:</label>
-                <input type="time" id="time" name="time" required>
-            </div>
-            <div class="email">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-            </div>
-            <div>
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" required placeholder="Enter your location">
-            </div>
+            </fieldset>
+
             <label for="review">Review:</label>
-            <textarea id="review" name="review" rows="4" 
-            required placeholder="Write your review here"></textarea>
-            <div class="checkbox-group">
-                <label for="subscribe">
-                    <input type="checkbox" id="subscribe" name="subscribe"> Subscribe to our newsletter
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review here..."></textarea>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com">
+
+            <fieldset>
+                <legend>Preferences:</legend>
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes"> Subscribe to Newsletter
                 </label>
-            </div>
-            <div class="radio-group">
-                <label for="contact">Preferred Contact Method:</label>
-                <label>
-                    <input type="radio" name="contact" value="email" required> Email
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" value="agree"> Agree to Terms and Conditions
                 </label>
-                <label>
-                    <input type="radio" name="contact" value="phone"> Phone
+                <label for="privacy">
+                    <input type="checkbox" id="privacy" name="privacy" value="agree"> Agree to Privacy Policy
                 </label>
-                <label>
-                    <input type="radio" name="contact" value="none"> No contact
-                </label>
-            </div>
-            <div class="submit-review">
-                <button type="submit">Submit Review</button>
-                <button type="reset">Reset</button>
-            </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>
-        <p>&copy;  <span id="currentyear"> </span> Jonathan M. Muembia. 
-        <p><span id="lastModified"> All rights reserved.</span></p>
+        <p>&copy; <span id="currentyear"></span> Jonathan M. Muembia. All rights reserved.</p>
+        <p id="lastModified"></p>
         <p>Follow us on <a href="https://twitter.com/jonathanmuembia" target="_blank">Twitter</a></p>
-
+    </footer>
 </body>
 </html>
