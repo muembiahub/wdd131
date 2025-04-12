@@ -7,11 +7,19 @@
     --siteplan-link-hover-color: #0056b3;
     --siteplan-form-color: #d4e2d7;
 }
-body{
+
+header{
     background-color: var(--siteplan-background-color);
     color: var(--siteplan-text-color);
-    font-family: Arial, sans-serif;
-    padding: 100px;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid var(--siteplan-border-color);
+    margin-bottom: 20px;
+}
+header h1{
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--siteplan-text-color);
 }
 .hover{
     color: #fff;
@@ -21,11 +29,13 @@ body{
     height: 40px;
     font-size: 16px;
     gap: 60px;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 140px;
     
 }
+.hover
 a{
     text-decoration: none;
     color: var(--siteplan-link-color);
@@ -33,6 +43,7 @@ a{
 }
 h1, h2, h3, h4, h5, h6{
     color: var(--siteplan-text-color);
+    text-align: center;
 }
 p{
     line-height: 1.6;
