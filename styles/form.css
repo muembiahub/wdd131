@@ -1,16 +1,35 @@
 :root{
-    --siteplan-background-color: #f0f0f0;
+    --siteplan-background-color: #dcc1d3;
     --siteplan-text-color: #333;
-    --siteplan-border-color: #ccc;
+    --siteplan-border-color: #000000e9;
+    --siteplan-header-color: #f8f9fa;
     --siteplan-link-color: #007bff;
     --siteplan-link-hover-color: #0056b3;
+    --siteplan-form-color: #d4e2d7;
 }
 body{
     background-color: var(--siteplan-background-color);
     color: var(--siteplan-text-color);
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 10px;
+    padding: 100px;
+}
+.hover{
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    gap: 60px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+    
+}
+a{
+    text-decoration: none;
+    color: var(--siteplan-link-color);
+    font-weight: bold;
 }
 h1, h2, h3, h4, h5, h6{
     color: var(--siteplan-text-color);
@@ -19,10 +38,14 @@ p{
     line-height: 1.6;
     margin: 0 0 1em;
 }
+main{
+   padding: 150px;
+   
+}
 form{
-    background-color: rgb(210, 145, 202);
+    background-color: var(--siteplan-form-color);
     border: 2px solid var(--siteplan-border-color);
-    padding: 10px;
+    padding: 90px;
     margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -30,30 +53,24 @@ form{
     flex-direction: column;
     gap: 20px;
 }
-.submit-review{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-}button{
+button{
     background-color: var(--siteplan-link-hover-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    
 }
 button:hover{
     background-color: var(--siteplan-link-color);
     color: #fff;
+   
 }
-.hover{
-    background-color: var(--siteplan-background-color);
-    border: 1px solid var(--siteplan-border-color);
-    padding: 6px;
-    margin: 10px 0;
-}
+
 
 
 
@@ -61,7 +78,7 @@ footer{
     background-color: var(--siteplan-background-color);
     padding: 10px;
     text-align: center;
-    border-top: 1px solid var(--siteplan-border-color);
+    border-top: 3px solid var(--siteplan-border-color);
     margin-top: 20px;
 }
   

@@ -18,10 +18,20 @@
 </head>
 <body>
     <header>
-        <h1>Product Review Form</h1>
+    <h1>Welcome to the Product Review Form</h1>
+    <nav class="hover">
+        <a href="index.html">Home</a>
+        <a href="place.html">Old</a>
+        <a href="contact.html">New</a>
+        <a href="about.html">Large</a>
+        <a href="temples.html">Small</a>
+    </nav>
     </header>
     <main>
         <form action="review.html" method="get">
+            <h2>Product Review Form</h2>
+            <p>Please fill out the form below to submit your product review.</p>
+            <p id="errorMessage" class="error"></p>
             <label for="product">Product:</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a product</option>
@@ -48,7 +58,8 @@
                     <input type="radio" name="rating" value="5"> <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="reviewDetails">
+                <legend>Review Details:</legend>
                 <label for="dates"> Date of Review : </label>
                 <input type="date" id="dates" name="dates"  required> <br>
                 <label for="time">Time of Review:</label>
