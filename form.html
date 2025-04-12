@@ -31,17 +31,16 @@
         <form action="review.html" method="get">
             <h2>Product Review Form</h2>
             <p>Please fill out the form below to submit your product review.</p>
-            <p id="errorMessage" class="error"></p>
-            <label for="product">Product:</label>
-            <select id="product" name="product" required>
+            <label for="productSelect">Select a Product:</label>
+            <select id="productSelect">
                 <option value="" disabled selected>Select a product</option>
-                <option value="product1">Product 1</option>
-                <option value="product2">Product 2</option>
-                <option value="product3">Product 3</option>
+             <!-- Options will be populated dynamically -->
             </select>
 
+
             <fieldset>
-                <legend > Overall Rating:</legend>
+                <label for="rating" required> Overall Rating:*</label>
+                <legend>Rate the product:</legend><br>
                 <label>
                     <input type="radio" name="rating" value="1" > <span>&#9733;</span>
                 </label>
@@ -60,23 +59,23 @@
             </fieldset>
             <fieldset class="reviewDetails">
                 <legend>Review Details:</legend>
-                <label for="dates"> Date of Review : </label>
+                <label for="dates"> Date of Review* : </label>
                 <input type="date" id="dates" name="dates"  required> <br>
                 <label for="time">Time of Review:</label>
                 <input type="time" id="time" name="time" ><br>
                 <label for="country" >Country:</label>
-                <input type="text" id="country" name="country" placeholder="Enter your country" required><br>
+                <input type="text" id="country" name="country" placeholder="Enter your country"><br>
 
             </fieldset>
             
             <label for="review">Review:</label>
-            <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review here..." required></textarea>
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review here..." ></textarea>
 
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" >
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            <input type="email" id="email" name="email" placeholder="example@example.com" >
 
             <fieldset>
                 <legend>Preferences:</legend>
@@ -99,11 +98,14 @@
 
             <button type="submit">Submit</button>
         </form>
+        <div id="counterDisplay"></div>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Jonathan M. Muembia. All rights reserved.</p>
         <p id="lastModified"></p>
         <p>Follow us on <a href="https://twitter.com/jonathanmuembia" target="_blank">Twitter</a></p>
+        <p>For more information, visit the <a href="https://www.churchofjesuschrist.org/temples?lang=eng">Church of Jesus Christ of Latter-day Saints</a>.</p>
+        <p>For more information about the temples, visit the <a href="https://www.churchofjesuschrist.org/temples?lang=eng">Church of Jesus Christ of Latter-day Saints</a>.</p>
     </footer>
 </body>
 </html>
