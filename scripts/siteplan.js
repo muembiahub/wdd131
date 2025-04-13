@@ -3,7 +3,7 @@ function addLogo(sitePlanId) {
     const logoContainer = document.createElement('hover');
     
     // Add a class for styling
-    
+    logoContainer.className = 'logo-container';
 
     const logo = document.createElement('img');
     logo.src = `https://th.bing.com/th/id/OIP.dvfk2Jb7inTWTNdzxV9T0AAAAA?rs=1&pid=ImgDetMain${sitePlanId}.png`; // Assuming logos are stored in this path
@@ -19,33 +19,59 @@ function addLogo(sitePlanId) {
 const sitePlanId = 'logo'; // Replace with actual site plan ID
 addLogo(sitePlanId);
 
-// Add a footer to the site with a copyright notice
-function addCopyright() {
-    const footerbutton = document.createElement('footer-button');
-    footerbutton.className = 'footer-button'; // Add a class for styling
+// Add a hover effect to the logo
+const logo = document.getElementById('site-logo');
+logo.addEventListener('mouseover', () => {
+    logo.style.transform = 'scale(1.1)'; // Scale up the logo on hover
+});
+logo.addEventListener('mouseout', () => {
+    logo.style.transform = 'scale(1)'; // Scale back to original size when not hovering
+});
 
-    const copyrightNotice = document.createElement('div');
-    const currentYear = new Date().getFullYear();
-    const lastModified = new Date(document.lastModified);
-    const siteName = document.title; // Get the site name from the title
-    const lastModifiedDate = lastModified.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-    
-    // Set the copyright notice text
-  
-    copyrightNotice.innerHTML = `
-        <p>© ${currentYear} Jonathan M. Muembia. All rights reserved.</p>
-        <p>Built with HTML, CSS, and JavaScript.</p>
-        <p>This site ${siteName} is not affiliated with The Church of Jesus Christ of Latter-day Saints. The information provided is for educational purposes only.</p>
-        <p>The images and content are the property of their respective owners. For more information, please visit the official website of The Church of Jesus Christ of Latter-day Saints.</p>
-        <p>This site is not an official site of The Church of Jesus Christ of Latter-day Saints. The information provided is for educational purposes only.</p>
-        <p>The images and content are the property of their respective owners. For more information, please visit the official website of The Church of Jesus Christ of Latter-day Saints.</p>
-        <p>This site was last modified on ${lastModifiedDate}.</p>
-    `;
-    footerbutton.appendChild(copyrightNotice); // Append the copyright notice to the footer button
-    footerbutton.appendChild(copyrightNotice); // Append the copyright notice to the footer button
-y
-}
+// add copywrite to the footer and link to  personal social media website
+const footer = document.querySelector('footer');
+const copywrite = document.createElement('p');
+const currentyear = new Date().getFullYear();
+const lastModified = document.lastModified;
+footer.appendChild(copywrite);
+copywrite.innerHTML = `&copy; ${currentyear} this site is not affiliated with the Church of Jesus Christ of Latter-day Saints.
+<br>All images and content are property of the Church of Jesus Christ of Latter-day Saints.
+- All rights reserved.
+<br>Created by <a href="https://www.linkedin.com/in/your-profile" target="_blank">Jonathan M. Meumbia</a>.
+<br>Site plan ID: ${sitePlanId}
+<br>Last modified: ${lastModified}
+<br>For more information, visit <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">churchofjesuschrist.org</a>.
+<br>For more information about the Church of Jesus Christ of Latter-day Saints, visit <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">churchofjesuschrist.org</a>.
+<br>Follow me on <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>.`;
+copywrite.style.textAlign = 'center';
+copywrite.style.fontSize = '0.8em';
+
+// Ensure footer styles are consistent for mobile and desktop views
+footer.style.padding = '20px';
+footer.style.backgroundColor = '#f9f9f9';
+footer.style.borderTop = '1px solid #ddd';
+footer.style.marginTop = '20px';
+
+// Add responsive styles for the logo container
+const style = document.createElement('style');
+style.textContent = `
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  footer p {
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  @media (max-width: 600px) {
+    footer p {
+      font-size: 0.7em;
+    }
+  }
+`;
+document.head.appendChild(style);
+
