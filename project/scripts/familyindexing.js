@@ -1,10 +1,7 @@
-
-
-
-
 // Add a logo to the site based on the site plan ID
 function addLogo(sitePlanId) {
-    const logoContainer = document.createElement('hover');
+    const logoContainer = document.createElement('header'); // Create a header element for the logo
+    logoContainer.id = 'logo-container'; // Set the ID for the logo container
     
     // Add a class for styling
     logoContainer.className = 'logo-container';
@@ -16,7 +13,12 @@ function addLogo(sitePlanId) {
     logo.id = 'site-logo';
 
     logoContainer.appendChild(logo);
-    document.body.prepend(logoContainer); // Add the logo container to the top of the body
+
+    // Locate the header element
+    const header = document.querySelector('header');
+
+    // Prepend the logo container to the header instead of the body
+    header.prepend(logoContainer);
 }
 
 // Example usage
@@ -33,6 +35,57 @@ logo.addEventListener('mouseout', () => {
 });
 
 
+// Check if the element with ID 'blogpage-form' exists in the HTML
+const blogpageFormElement = document.getElementById('blogpage-form');
+if (blogpageFormElement) {
+    // Create and append the form only if the element exists
+    const form = document.createElement('form');
+    form.id = 'blogpage-form';
+    form.name = 'blogpage-form';
+    form.className = 'blogpage-form';
+    form.method = 'POST';
+    form.action = 'https://muembiahub.github.io/wdd131/review.html?productSelect=fc-2050&rating=2&dates=2025-04-14&time=&country=&review=&phone=&email=&updates=yes&offers=yes';
+
+    form.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>Please fill out the form below to get in touch with us.</p>
+        <label for="family-name">Family Name:</label>
+        <input type="text" id="family-name" name="family-name" required>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="date"> Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    `;
+
+    form.style.display = 'flex';
+    form.style.flexDirection = 'column';
+    form.style.width = '300px';
+    form.style.margin = '20px auto';
+    form.style.padding = '20px';
+    form.style.border = '1px solid #ccc';
+    form.style.borderRadius = '5px';
+    form.style.backgroundColor = '#f9f9f9';
+
+    // Append the form to the main element
+    const main = document.querySelector('main');
+    main.appendChild(form);
+}
 
 // add copywrite to the footer and link to  personal social media website
 const footer = document.querySelector('footer');
@@ -81,46 +134,36 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// add any  to dinamic content of form 
-// add a form to the site plan
-const form = document.createElement('form');
-form.id = 'site-plan-form';
-form.innerHTML = 
-    `
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+const familysearchindexingimages = [
+    "https://www.familysearch.org/en/images/1/1b/Indexing_Logo.png",
+    "https://www.familysearch.org/en/images/2/2d/Indexing_Logo_1.png",
+    "https://www.familysearch.org/en/images/3/3c/Indexing_Logo_2.png",
+    "https://www.familysearch.org/en/images/5/5c/Indexing_Logo_2.png",
+    "https://www.familysearch.org/en/images/3/3d/Indexing_Logo_3.png",
+    "https://www.familysearch.org/en/images/4/4f/Indexing_Logo_4.png",
+    "https://www.familysearch.org/en/images/2/2e/Indexing_Logo_5.png",
+];
+const familysearchindexing = document.getElementById("familysearchindexing");
+if (familysearchindexing) {
+    familysearchindexing.innerHTML = familysearchindexingimages
+        .map((image) => `<img src="${image}" alt="Family Search Indexing" />`)
+        .join("");
+}
+// Add a hover effect to the images 
+const images = document.querySelectorAll("#familysearchindexing img");
+images.forEach((image) => {
+    image.addEventListener("mouseover", () => {
+        image.style.transform = "scale(1.1)"; // Scale up the image on hover
+    });
+    image.addEventListener("mouseout", () => {
+        image.style.transform = "scale(1)"; // Scale back to original size when not hovering
+    });
+});
+// Add a click event to the images to open a new tab with the FamilySearch Indexing page
+images.forEach((image) => {
+    image.addEventListener("click", () => {
+        window.open("https://www.familysearch.org/en/indexing/", "_blank"); // Open the FamilySearch Indexing page in a new tab
+    });
+});
 
-    <label for="site-plan-id">Site Plan ID:</label>
-    <input type="text" id="site-plan-id" name="site-plan-id" required>
 
-    <label for="date">Preferred Date:</label>
-    <input type="date" id="date" name="date" required>
-
-    <label for="time">Preferred Time:</label>
-    <input type="time" id="time" name="time" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    
-
-    
-    <button type="submit">Submit</button>
-`;
-form.style.display = 'flex';
-form.style.flexDirection = 'column';
-form.style.width = '300px';
-form.style.margin = '20px auto';
-form.style.padding = '20px';
-form.style.border = '1px solid #ccc';
-form.style.borderRadius = '5px';
-form.style.backgroundColor = '#f9f9f9';
-form.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-form.style.fontSize = '0.9em';
-form.style.lineHeight = '1.5';
-form.style.fontFamily = 'Arial, sans-serif';
-form.style.color = '#333';
-form.style.fontWeight = 'normal';

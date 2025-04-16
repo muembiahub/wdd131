@@ -1,7 +1,70 @@
-:root{
-    --color-primary: #4CAF50;
-    --color-secondary: #f44336;
-    --color-background: #f0f0f0;
-    --color-text: #333;
-    --color-border: #ccc;
+:root {
+    --color-primary: #1ad61a; /* Green */
+    --color-secondary: #FF5722; /* Orange */
+    --color-background: #a8daa8; /* Light Gray */
+    --color-text: #212121; /* Dark Gray */
+    --color-border: #BDBDBD; /* Medium Gray */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--color-background);
+    color: #0c0909e9;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-border);
+}
+header a{
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+h1, h2, h3 {
+    color: var(--color-primary);
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 1px solid var(--color-border);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: #0c0909e9;
+    text-align: center;
+    padding: 15px 0;
+}
+
+main {
+    padding: 20px;
 }
